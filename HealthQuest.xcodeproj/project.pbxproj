@@ -15,6 +15,7 @@
 		FD5588F328945EB5001E8A84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD5588F128945EB5001E8A84 /* LaunchScreen.storyboard */; };
 		FD5588FE28945EB5001E8A84 /* HealthQuestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5588FD28945EB5001E8A84 /* HealthQuestTests.swift */; };
 		FD55890928945EB5001E8A84 /* HealthQuestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD55890828945EB5001E8A84 /* HealthQuestUITests.swift */; };
+		FDD53B8F2899A94F005C5838 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD53B8E2899A94F005C5838 /* LoginController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		FD55890428945EB5001E8A84 /* HealthQuestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthQuestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD55890828945EB5001E8A84 /* HealthQuestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthQuestUITests.swift; sourceTree = "<group>"; };
 		FD55890A28945EB5001E8A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDD53B8E2899A94F005C5838 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				FD5588E828945EB4001E8A84 /* SceneDelegate.swift */,
 				FD5588EA28945EB4001E8A84 /* ViewController.swift */,
 				FD5588EC28945EB4001E8A84 /* Main.storyboard */,
+				FDD53B8E2899A94F005C5838 /* LoginController.swift */,
 				FD5588EF28945EB5001E8A84 /* Assets.xcassets */,
 				FD5588F128945EB5001E8A84 /* LaunchScreen.storyboard */,
 				FD5588F428945EB5001E8A84 /* Info.plist */,
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD5588EB28945EB4001E8A84 /* ViewController.swift in Sources */,
+				FDD53B8F2899A94F005C5838 /* LoginController.swift in Sources */,
 				FD5588E728945EB4001E8A84 /* AppDelegate.swift in Sources */,
 				FD5588E928945EB4001E8A84 /* SceneDelegate.swift in Sources */,
 			);
