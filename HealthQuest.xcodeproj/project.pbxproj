@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54B6954B289AFF5500FC8CBF /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B6954A289AFF5500FC8CBF /* PlanViewController.swift */; };
 		FD5588E728945EB4001E8A84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5588E628945EB4001E8A84 /* AppDelegate.swift */; };
 		FD5588E928945EB4001E8A84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5588E828945EB4001E8A84 /* SceneDelegate.swift */; };
 		FD5588EB28945EB4001E8A84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5588EA28945EB4001E8A84 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		54B6954A289AFF5500FC8CBF /* PlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
 		FD5588E328945EB4001E8A84 /* HealthQuest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthQuest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD5588E628945EB4001E8A84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD5588E828945EB4001E8A84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				FD5588EF28945EB5001E8A84 /* Assets.xcassets */,
 				FD5588F128945EB5001E8A84 /* LaunchScreen.storyboard */,
 				FD5588F428945EB5001E8A84 /* Info.plist */,
+				54B6954A289AFF5500FC8CBF /* PlanViewController.swift */,
 			);
 			path = HealthQuest;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD5588EB28945EB4001E8A84 /* ViewController.swift in Sources */,
+				54B6954B289AFF5500FC8CBF /* PlanViewController.swift in Sources */,
 				FDD53B8F2899A94F005C5838 /* LoginController.swift in Sources */,
 				FD5588E728945EB4001E8A84 /* AppDelegate.swift in Sources */,
 				FD5588E928945EB4001E8A84 /* SceneDelegate.swift in Sources */,
