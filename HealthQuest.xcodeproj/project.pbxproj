@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		54B6954B289AFF5500FC8CBF /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B6954A289AFF5500FC8CBF /* PlanViewController.swift */; };
+		FD5528D9289B6D1300D30206 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5528D8289B6D1300D30206 /* RegistrationController.swift */; };
+		FD5528DE289B6D3800D30206 /* BmiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5528DD289B6D3800D30206 /* BmiController.swift */; };
 		FD5588E728945EB4001E8A84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5588E628945EB4001E8A84 /* AppDelegate.swift */; };
 		FD5588E928945EB4001E8A84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5588E828945EB4001E8A84 /* SceneDelegate.swift */; };
 		FD5588EB28945EB4001E8A84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5588EA28945EB4001E8A84 /* ViewController.swift */; };
@@ -38,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		54B6954A289AFF5500FC8CBF /* PlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
+		FD5528D8289B6D1300D30206 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		FD5528DD289B6D3800D30206 /* BmiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmiController.swift; sourceTree = "<group>"; };
 		FD5588E328945EB4001E8A84 /* HealthQuest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthQuest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD5588E628945EB4001E8A84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD5588E828945EB4001E8A84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,9 +108,11 @@
 			isa = PBXGroup;
 			children = (
 				FD5588E628945EB4001E8A84 /* AppDelegate.swift */,
+				FD5528D8289B6D1300D30206 /* RegistrationController.swift */,
 				FD5588E828945EB4001E8A84 /* SceneDelegate.swift */,
 				FD5588EA28945EB4001E8A84 /* ViewController.swift */,
 				FD5588EC28945EB4001E8A84 /* Main.storyboard */,
+				FD5528DD289B6D3800D30206 /* BmiController.swift */,
 				FDD53B8E2899A94F005C5838 /* LoginController.swift */,
 				FD5588EF28945EB5001E8A84 /* Assets.xcassets */,
 				FD5588F128945EB5001E8A84 /* LaunchScreen.storyboard */,
@@ -268,6 +274,8 @@
 				54B6954B289AFF5500FC8CBF /* PlanViewController.swift in Sources */,
 				FDD53B8F2899A94F005C5838 /* LoginController.swift in Sources */,
 				FD5588E728945EB4001E8A84 /* AppDelegate.swift in Sources */,
+				FD5528D9289B6D1300D30206 /* RegistrationController.swift in Sources */,
+				FD5528DE289B6D3800D30206 /* BmiController.swift in Sources */,
 				FD5588E928945EB4001E8A84 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
