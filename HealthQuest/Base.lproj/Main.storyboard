@@ -181,11 +181,29 @@
                     <connections>
                         <segue destination="VWS-BA-SMD" kind="relationship" relationship="viewControllers" id="w31-Ye-fbd"/>
                         <segue destination="kyi-57-r8U" kind="relationship" relationship="viewControllers" id="A85-h8-vB9"/>
+                        <segue destination="s2i-c1-Nk1" kind="relationship" relationship="viewControllers" id="bHh-4V-Lmo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fc1-MY-fck" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1165" y="40"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="WUu-k9-scl">
+            <objects>
+                <viewController id="s2i-c1-Nk1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V8A-1j-tal">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="eKB-9X-Ahp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Nal-st-xUC"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DAw-tJ-BTm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-245" y="464"/>
         </scene>
         <!--Workout plan-->
         <scene sceneID="O1K-Et-6n4">
@@ -402,7 +420,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rps-0R-J6H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-200.00000000000003" y="797.54464285714278"/>
+            <point key="canvasLocation" x="-1133" y="980"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1j5-ei-TeW">
