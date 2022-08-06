@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		54B6954B289AFF5500FC8CBF /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B6954A289AFF5500FC8CBF /* PlanViewController.swift */; };
+		BCD49C05289EB86600B0C136 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD49C04289EB86600B0C136 /* ProfileViewController.swift */; };
 		FD5528D9289B6D1300D30206 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5528D8289B6D1300D30206 /* RegistrationController.swift */; };
 		FD5528DE289B6D3800D30206 /* BmiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5528DD289B6D3800D30206 /* BmiController.swift */; };
 		FD5588E728945EB4001E8A84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5588E628945EB4001E8A84 /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		54B6954A289AFF5500FC8CBF /* PlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
+		BCD49C04289EB86600B0C136 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		FD5528D8289B6D1300D30206 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		FD5528DD289B6D3800D30206 /* BmiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmiController.swift; sourceTree = "<group>"; };
 		FD5588E328945EB4001E8A84 /* HealthQuest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthQuest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +120,7 @@
 				FD5588F128945EB5001E8A84 /* LaunchScreen.storyboard */,
 				FD5588F428945EB5001E8A84 /* Info.plist */,
 				54B6954A289AFF5500FC8CBF /* PlanViewController.swift */,
+				BCD49C04289EB86600B0C136 /* ProfileViewController.swift */,
 			);
 			path = HealthQuest;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				FD5588E728945EB4001E8A84 /* AppDelegate.swift in Sources */,
 				FD5528D9289B6D1300D30206 /* RegistrationController.swift in Sources */,
 				FD5528DE289B6D3800D30206 /* BmiController.swift in Sources */,
+				BCD49C05289EB86600B0C136 /* ProfileViewController.swift in Sources */,
 				FD5588E928945EB4001E8A84 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
