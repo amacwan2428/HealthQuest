@@ -693,6 +693,9 @@
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onSubmitClick:" destination="W9O-mI-zh8" eventType="touchUpInside" id="l39-4j-XTB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rZQ-GA-8E7"/>
@@ -708,6 +711,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sje-Mn-zcQ"/>
+                    <connections>
+                        <outlet property="heightTxt" destination="6zg-uE-GJu" id="64W-kP-EzI"/>
+                        <outlet property="weightTxt" destination="05n-Aq-s2J" id="ptA-Za-Dcm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U4J-a1-AhN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
