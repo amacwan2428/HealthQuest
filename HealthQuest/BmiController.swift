@@ -8,14 +8,24 @@
 import UIKit
 
 class BmiController: UIViewController {
+    @IBOutlet weak var weightTxt: UITextField!
+    @IBOutlet weak var heightTxt: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
+        
 
+    @IBAction func onSubmitClick(_ sender: Any) {
+        let w = Double(weightTxt.text!)
+        let h = Double(heightTxt.text!)
+        let hinm = h!/100
+        
+        let bmi = w!/(hinm * hinm)
+        print("the bmi i s ",bmi)
+        }
     /*
     // MARK: - Navigation
 
