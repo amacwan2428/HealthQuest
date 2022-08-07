@@ -18,6 +18,42 @@ class ProfileViewController: UIViewController{
 
 }
 
+class ProfileEditViewController: UIViewController{
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+    }
+
+}
+
+class ProfileAchieveViewController: UIViewController{
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+    }
+
+}
+
+class ProfileSubscriptionViewController: UIViewController{
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+    }
+
+}
+
+class ProfileFriendsViewController: UIViewController{
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+    }
+
+}
+
 extension UIImageView {
    func setRounded() {
      layer.borderWidth = 1
