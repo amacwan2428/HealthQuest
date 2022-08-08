@@ -98,12 +98,18 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="emailAction:" destination="VWS-BA-SMD" eventType="editingChanged" id="SfU-kj-8qa"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bjG-AF-I8j">
                                 <rect key="frame" x="20" y="525" width="336" height="34"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                <connections>
+                                    <action selector="passAction:" destination="VWS-BA-SMD" eventType="editingChanged" id="qSN-GD-0ms"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cm-Bf-ROp">
                                 <rect key="frame" x="127" y="652" width="161" height="51"/>
@@ -117,6 +123,10 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
                                 </state>
+                                <connections>
+                                    <action selector="signInAction:" destination="VWS-BA-SMD" eventType="touchUpInside" id="uDQ-Zi-uEg"/>
+                                    <segue destination="Xzo-rj-KBr" kind="show" identifier="loginHome" id="ItT-6x-sye"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XmD-3K-AZL">
                                 <rect key="frame" x="168" y="594" width="188" height="33"/>
@@ -163,6 +173,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="sdF-av-CRF"/>
+                    <connections>
+                        <outlet property="emailTxt" destination="4Hs-2H-KYf" id="hic-3j-p7C"/>
+                        <outlet property="passwordTxt" destination="bjG-AF-I8j" id="xh3-LC-j3I"/>
+                        <outlet property="signInBtn" destination="3cm-Bf-ROp" id="DCl-16-nt4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bc8-A9-Ycj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1169,6 +1184,9 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="fnameChange:" destination="SgD-vs-XB4" eventType="editingChanged" id="WGO-L7-5nw"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vgs-S5-prb">
                                 <rect key="frame" x="20" y="292" width="336" height="35"/>
@@ -1179,6 +1197,9 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="lnameChange:" destination="SgD-vs-XB4" eventType="editingChanged" id="Vvk-fu-vm1"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7l2-1d-LtB">
                                 <rect key="frame" x="20" y="362" width="329" height="35"/>
@@ -1189,6 +1210,9 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="emailChange:" destination="SgD-vs-XB4" eventType="editingChanged" id="PY5-IU-aWb"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5tf-1p-TZT">
                                 <rect key="frame" x="20" y="431" width="336" height="34"/>
@@ -1199,6 +1223,9 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="passChange:" destination="SgD-vs-XB4" eventType="editingChanged" id="rnh-pl-flP"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V0X-Lh-AXg">
                                 <rect key="frame" x="20" y="502" width="336" height="35"/>
@@ -1209,6 +1236,9 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="confirmChange:" destination="SgD-vs-XB4" eventType="editingChanged" id="bBH-5e-qeR"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twN-S1-thO">
                                 <rect key="frame" x="98" y="633" width="216" height="100"/>
@@ -1282,12 +1312,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="weightAction:" destination="W9O-mI-zh8" eventType="editingChanged" id="rNx-p9-BOa"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Height in cms" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6zg-uE-GJu">
                                 <rect key="frame" x="20" y="416" width="350" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="heightAction:" destination="W9O-mI-zh8" eventType="editingChanged" id="2yi-Hw-YY7"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLy-Ic-f2c">
                                 <rect key="frame" x="112" y="494" width="190" height="110"/>
@@ -1307,7 +1343,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ja0-yZ-Tni">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ja0-yZ-Tni">
                                 <rect key="frame" x="31" y="251" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="rdiounchecked"/>
@@ -1356,12 +1392,29 @@
                         <outlet property="heightTxt" destination="6zg-uE-GJu" id="64W-kP-EzI"/>
                         <outlet property="rdioMale" destination="Ja0-yZ-Tni" id="L3S-uk-gwg"/>
                         <outlet property="rdiofemale" destination="vPy-Xa-Uxe" id="f3K-DA-B13"/>
+                        <outlet property="subButton" destination="CLy-Ic-f2c" id="66n-RU-t01"/>
                         <outlet property="weightTxt" destination="05n-Aq-s2J" id="ptA-Za-Dcm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U4J-a1-AhN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="540.57971014492762" y="-1252.2321428571429"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="ARG-id-9u1">
+            <objects>
+                <viewController id="Xzo-rj-KBr" customClass="HomeViewController" customModule="HealthQuest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XGT-eF-LlE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="x7t-aZ-Fa6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bc6-YQ-cJs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tFc-Qs-hHx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1207" y="-602"/>
         </scene>
     </scenes>
     <resources>

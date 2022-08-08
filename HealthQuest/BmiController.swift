@@ -11,6 +11,7 @@ class BmiController: UIViewController, UITextFieldDelegate {
     var tags = 0
     var bmr: Double = 0
     var years: Double = 0
+    var flag = 0
     let datePicker = UIDatePicker()
     @IBOutlet weak var weightTxt: UITextField!
     @IBOutlet weak var heightTxt: UITextField!
@@ -20,15 +21,29 @@ class BmiController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var rdiofemale: UIButton!
     
+    @IBOutlet weak var subButton: UIButton!
     @IBOutlet weak var rdioMale: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         createDatePickerView()
         weightTxt.delegate = self
         heightTxt.delegate = self
+        subButton.isEnabled = false
         // Do any additional setup after loading the view.
     }
         
+    @IBAction func weightAction(_ sender: Any) {
+        flag = flag + 1
+        if(flag == 2){
+            subButton.isEnabled = true
+        }
+    }
+    @IBAction func heightAction(_ sender: Any) {
+        flag = flag + 1
+        if(flag == 2){
+            subButton.isEnabled = true
+        }
+    }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         weightTxt.resignFirstResponder()
         heightTxt.resignFirstResponder()
