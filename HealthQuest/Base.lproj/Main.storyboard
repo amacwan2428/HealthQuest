@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -215,11 +214,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NCY-Su-4ed">
-                                <rect key="frame" x="0.0" y="129" width="414" height="685"/>
+                                <rect key="frame" x="0.0" y="85" width="414" height="695"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="SKK-7b-84H">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SKK-7b-84H" id="rOv-h2-bQH">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -612,7 +611,6 @@
                                 <color key="backgroundColor" red="0.4941176471" green="0.67450980390000004" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Go!"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Steps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irD-FY-37V">
                                 <rect key="frame" x="47" y="102" width="44" height="21"/>
@@ -863,7 +861,7 @@
         <!--Profile-->
         <scene sceneID="qN2-kw-cPq">
             <objects>
-                <viewController id="eqi-lt-GtP" customClass="ProfileViewController" customModule="HealthQuest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vc_profile_main" id="eqi-lt-GtP" customClass="ProfileViewController" customModule="HealthQuest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nXB-uw-VaV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -926,6 +924,14 @@
                                 <rect key="frame" x="46" y="487" width="322" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogF-t1-xYK">
+                                <rect key="frame" x="355" y="115" width="33" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="EDIT"/>
+                                <connections>
+                                    <action selector="btnEdit" destination="eqi-lt-GtP" eventType="touchUpInside" id="x98-kc-UbJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dTe-W3-gMl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -946,7 +952,7 @@
         <!--Profile Edit View Controller-->
         <scene sceneID="Dm3-V6-uzF">
             <objects>
-                <viewController id="Nk6-lX-Y0W" customClass="ProfileEditViewController" customModule="HealthQuest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vc_profile_edit" id="Nk6-lX-Y0W" customClass="ProfileEditViewController" customModule="HealthQuest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L5M-Nx-GC8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1005,6 +1011,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="btnSave" destination="Nk6-lX-Y0W" eventType="touchUpInside" id="ZhB-hd-Yct"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="byk-nd-nVd"/>
@@ -1054,7 +1063,7 @@
         <!--Profile Subscription View Controller-->
         <scene sceneID="Zbe-kk-4oo">
             <objects>
-                <viewController id="wNW-rW-Mxj" customClass="ProfileSubscriptionViewController" customModule="HealthQuest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vc_profile_sub" id="wNW-rW-Mxj" customClass="ProfileSubscriptionViewController" customModule="HealthQuest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1PX-9L-08e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1086,7 +1095,7 @@
         <!--Profile Friends View Controller-->
         <scene sceneID="kiL-47-xk9">
             <objects>
-                <viewController id="2SK-xN-RYK" customClass="ProfileFriendsViewController" customModule="HealthQuest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vc_profile_friends" id="2SK-xN-RYK" customClass="ProfileFriendsViewController" customModule="HealthQuest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9ZL-8O-z77">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

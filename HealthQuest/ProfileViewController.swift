@@ -15,6 +15,10 @@ class ProfileViewController: UIViewController{
 
         imageAvatar.setRounded()
     }
+    
+    @IBAction func btnEdit(){
+        goToVC(vc_id: "vc_profile_edit")
+    }
 
 }
 
@@ -24,7 +28,11 @@ class ProfileEditViewController: UIViewController{
         super.viewDidLoad()
 
     }
-
+    
+    @IBAction func btnSave(){
+        goToVC(vc_id: "vc_profile_main")
+    }
+    
 }
 
 class ProfileAchieveViewController: UIViewController{
@@ -62,4 +70,14 @@ extension UIImageView {
      layer.cornerRadius = self.frame.height / 2
      clipsToBounds = true
    }
+}
+
+extension UIViewController{
+    func goToVC(vc_id:String){
+        guard let vc = storyboard?.instantiateViewController(identifier: vc_id) as? ProfileEditViewController else{
+            return
+        }
+        present(vc, animated: true)
+        
+    }
 }
