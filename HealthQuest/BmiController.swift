@@ -12,8 +12,11 @@ class BmiController: UIViewController {
     @IBOutlet weak var weightTxt: UITextField!
     @IBOutlet weak var heightTxt: UITextField!
 
+    
     @IBOutlet weak var bdayText: UITextField!
+    
     @IBOutlet weak var rdiofemale: UIButton!
+    
     @IBOutlet weak var rdioMale: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,8 +41,7 @@ class BmiController: UIViewController {
         bdayText.text = formatter.string(from: datePicker.date)
         self.view.endEditing(true)
     }
-    @IBAction func rdioActionTwo(_ sender: UIButton) {
-        
+    @IBAction func rdAction2(_ sender: UIButton) {
         if sender.tag == 1{
             rdioMale.isSelected = true
             rdiofemale.isSelected = false
@@ -48,8 +50,8 @@ class BmiController: UIViewController {
             rdioMale.isSelected = false
         }
     }
-    @IBAction func rdioAction(_ sender: UIButton) {
-        
+    
+    @IBAction func rdAction(_ sender: UIButton) {
         if sender.tag == 1 {
             rdioMale.isSelected = true
             rdiofemale.isSelected = false
@@ -57,7 +59,9 @@ class BmiController: UIViewController {
             rdioMale.isSelected = false
             rdiofemale.isSelected = true
         }
+        
     }
+    
     @IBAction func onSubmitClick(_ sender: Any) {
         let w = Double(weightTxt.text!)
         let h = Double(heightTxt.text!)
