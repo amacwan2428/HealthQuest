@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SgD-vs-XB4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -205,6 +206,47 @@
             </objects>
             <point key="canvasLocation" x="-339" y="575"/>
         </scene>
+        <!--Daily Todo View Controller-->
+        <scene sceneID="JdD-mq-whg">
+            <objects>
+                <viewController id="otD-yT-rkq" customClass="DailyTodoViewController" customModule="HealthQuest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0jO-0x-PSJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NCY-Su-4ed">
+                                <rect key="frame" x="0.0" y="129" width="414" height="685"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="SKK-7b-84H">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SKK-7b-84H" id="rOv-h2-bQH">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="byc-ge-H20"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="byc-ge-H20" firstAttribute="bottom" secondItem="NCY-Su-4ed" secondAttribute="bottom" constant="28" id="9aE-kk-h80"/>
+                            <constraint firstItem="NCY-Su-4ed" firstAttribute="top" secondItem="byc-ge-H20" secondAttribute="top" constant="85" id="9ti-pP-Xdf"/>
+                            <constraint firstItem="NCY-Su-4ed" firstAttribute="centerX" secondItem="0jO-0x-PSJ" secondAttribute="centerX" id="IqA-g4-TZh"/>
+                            <constraint firstItem="NCY-Su-4ed" firstAttribute="leading" secondItem="byc-ge-H20" secondAttribute="leading" id="crF-zo-MOU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="eqH-Tg-g2m"/>
+                    <connections>
+                        <outlet property="table" destination="NCY-Su-4ed" id="QwA-6d-Eph"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1AP-AM-xVa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3631.884057971015" y="1185.9375"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="cQ9-se-w3E">
             <objects>
@@ -231,7 +273,7 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Button"/>
                                                         <connections>
-                                                            <segue destination="R1t-tw-8IM" kind="show" id="UJf-gc-LZR"/>
+                                                            <segue destination="otD-yT-rkq" kind="show" id="6Df-Cp-ErZ"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4v-e6-nuv">
@@ -557,11 +599,11 @@
             <objects>
                 <viewController title="Workout plan" id="R1t-tw-8IM" customClass="PlanViewController" customModule="HealthQuest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QnI-IC-i9W">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sfz-io-afx">
-                                <rect key="frame" x="0.0" y="205" width="414" height="603"/>
+                                <rect key="frame" x="0.0" y="293" width="414" height="569"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="G3H-HJ-oZa">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="750"/>
@@ -1269,9 +1311,6 @@
             <point key="canvasLocation" x="540.57971014492762" y="-1252.2321428571429"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="UJf-gc-LZR"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="alexandra-tran-unsplash" width="5520" height="3957"/>
         <image name="karsten-winegeart-unsplash" width="3699" height="2471"/>
