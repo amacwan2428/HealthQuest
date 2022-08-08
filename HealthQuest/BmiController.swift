@@ -7,7 +7,10 @@
 
 import UIKit
 
-class BmiController: UIViewController {
+class BmiController: UIViewController, UITextFieldDelegate {
+    var tags = 0
+    var bmr: Double = 0
+    var years: Double = 0
     let datePicker = UIDatePicker()
     @IBOutlet weak var weightTxt: UITextField!
     @IBOutlet weak var heightTxt: UITextField!
@@ -21,9 +24,16 @@ class BmiController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         createDatePickerView()
+        weightTxt.delegate = self
+        heightTxt.delegate = self
         // Do any additional setup after loading the view.
     }
         
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        weightTxt.resignFirstResponder()
+        heightTxt.resignFirstResponder()
+        return true
+    }
     func createDatePickerView(){
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -40,14 +50,25 @@ class BmiController: UIViewController {
         formatter.timeStyle = .none
         bdayText.text = formatter.string(from: datePicker.date)
         self.view.endEditing(true)
+        calculateAge()
+    }
+    func calculateAge(){
+        let dob = datePicker.date
+        let today = Date()
+        let cal = NSCalendar(identifier: NSCalendar.Identifier.gregorian)
+        let age = cal?.components([.month,.day,.year], from: dob, to:today, options: [])
+        print(age?.year)
+        years = Double(age?.year ?? 0)
     }
     @IBAction func rdAction2(_ sender: UIButton) {
         if sender.tag == 1{
             rdioMale.isSelected = true
             rdiofemale.isSelected = false
+            tags = 1
         } else if sender.tag == 2{
             rdiofemale.isSelected = true
             rdioMale.isSelected = false
+            tags = 2
         }
     }
     
@@ -55,9 +76,11 @@ class BmiController: UIViewController {
         if sender.tag == 1 {
             rdioMale.isSelected = true
             rdiofemale.isSelected = false
+            tags = 1
         } else if sender.tag == 2 {
             rdioMale.isSelected = false
             rdiofemale.isSelected = true
+            tags = 2
         }
         
     }
@@ -69,6 +92,23 @@ class BmiController: UIViewController {
         
         let bmi = w!/(hinm * hinm)
         print("the bmi i s ",bmi)
+        
+        if tags == 1{
+            print("male")
+            let bmr1 = (13.397 * w!)
+            let bmr2 = (4.799 * h!)
+            let bmr3 = (5.677 * years)
+            bmr = 88.362 + bmr1 + bmr2 - bmr3
+            print(bmr)
+         }
+        if tags == 2{
+            print("female")
+            let bmr1 = (9.247 * w!)
+            let bmr2 = (3.098 * h!)
+            let bmr3 = (4.330 * years)
+            bmr = 447.593 + bmr1 + bmr2 - bmr3
+            print(bmr)
+        }
         }
     /*
     // MARK: - Navigation
