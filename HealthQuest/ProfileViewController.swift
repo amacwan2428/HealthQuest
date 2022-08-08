@@ -24,6 +24,7 @@ class ProfileViewController: UIViewController{
 
 class ProfileEditViewController: UIViewController{
 
+    @IBOutlet weak var viewSaveBtn: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
