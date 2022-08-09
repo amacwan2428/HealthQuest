@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "eb2271c1e561a6b8588e13310b4d580c-deportista-corriendo-silueta.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
