@@ -104,10 +104,22 @@ class BmiController: UIViewController, UITextFieldDelegate {
         let w = Double(weightTxt.text!)
         let h = Double(heightTxt.text!)
         let hinm = h!/100
-        
+        var desc = "";
         let bmi = w!/(hinm * hinm)
         print("the bmi i s ",bmi)
-        
+        if bmi < 18.5 {
+            desc = "You are underweight"
+            print("You are underweight")
+        } else if bmi >= 18.5 && bmi <= 24.9 {
+            desc = "You have a healthy weight"
+            print("You have healthy weight")
+        } else if bmi >= 25 && bmi <= 29.9{
+            desc = "You are overweight"
+            print("You are overweight")
+        } else {
+            desc = "You are obese"
+            print("You are obese")
+        }
         if tags == 1{
             print("male")
             let bmr1 = (13.397 * w!)
@@ -124,6 +136,12 @@ class BmiController: UIViewController, UITextFieldDelegate {
             bmr = 447.593 + bmr1 + bmr2 - bmr3
             print(bmr)
         }
+        let controller = storyboard?.instantiateViewController(identifier: "HomeStory") as! HomeViewController
+        controller.bmi = String(bmi)
+        controller.desc = desc
+        controller.bmr = String(bmr)
+        controller.modalPresentationStyle = .fullScreen
+        present(controller, animated: true, completion: nil)
         }
     /*
     // MARK: - Navigation

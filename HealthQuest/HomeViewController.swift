@@ -9,9 +9,26 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var bmiLabel: UILabel!
+    
+    @IBOutlet weak var bmrLabel: UILabel!
+    
+    @IBOutlet weak var bmiExLa: UILabel!
+    var bmi: String?
+    var bmr: String?
+    var desc: String?
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if bmi != nil {
+            bmiLabel.text = bmi
+        }
+        if bmiExLa != nil {
+            bmiExLa.text = desc
+        }
+        if bmr != nil {
+            bmrLabel.text = bmr
+        }
         // Do any additional setup after loading the view.
     }
     
