@@ -8,6 +8,7 @@
 import UIKit
 
 class RegistrationController: UIViewController, UITextFieldDelegate {
+    var tags = 0
     @IBOutlet weak var fName: UITextField!
     
     @IBOutlet weak var uEmail: UITextField!
@@ -27,6 +28,7 @@ class RegistrationController: UIViewController, UITextFieldDelegate {
         uEmail.delegate = self
         uPassword.delegate = self
         confirmPassword.delegate = self
+        subButton.isEnabled = false
         // Do any additional setup after loading the view.
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -37,21 +39,44 @@ class RegistrationController: UIViewController, UITextFieldDelegate {
         confirmPassword.resignFirstResponder()
         return true
     }
+    
+    @IBAction func fnameChange(_ sender: Any) {
+        tags = tags + 1
+        if(tags == 5){
+            subButton.isEnabled = true
+        }
+    }
+    
+    @IBAction func lnameChange(_ sender: Any) {
+        tags = tags + 1
+        if(tags == 5){
+            subButton.isEnabled = true
+        }
+    }
+    
+    @IBAction func emailChange(_ sender: Any) {
+        tags = tags + 1
+        if(tags == 5){
+            subButton.isEnabled = true
+        }
+    }
+    
+    @IBAction func passChange(_ sender: Any) {
+        tags = tags + 1
+        if(tags == 5){
+            subButton.isEnabled = true
+        }
+    }
+    
+    @IBAction func confirmChange(_ sender: Any) {
+        tags = tags + 1
+        if(tags == 5){
+            subButton.isEnabled = true
+        }
+    }
+    
     @IBAction func registerClick(_ sender: Any) {
-        guard  let first = fName.text, first != "" else {
-            print("Name is empty")
-            count = 1
-            return
-        }
-        guard let second = lName.text, second != ""
-        else {
-            print("Last Name is empty")
-            count = 1
-            return
-        }
-        if(count == 1){
             
-        }
     }
     
     /*
