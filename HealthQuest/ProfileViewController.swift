@@ -19,7 +19,14 @@ class ProfileViewController: UIViewController{
     @IBAction func btnEdit(){
         goToVC(vc_id: "vc_profile_edit")
     }
-
+    
+    @IBAction func btnAchieve(){
+        guard let vc = storyboard?.instantiateViewController(identifier: "vc_profile_achieve") as? ProfileAchieveViewController else{
+            return
+        }
+        present(vc, animated: true)
+        
+    }
 }
 
 class ProfileEditViewController: UIViewController{
@@ -32,7 +39,13 @@ class ProfileEditViewController: UIViewController{
     }
     
     @IBAction func btnSave(){
-        goToVC(vc_id: "vc_profile_main")
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func btnBack(){
+        self.dismiss(animated: true, completion: nil)
+
     }
     
     private func readProfile(){
@@ -64,6 +77,8 @@ class ProfileAchieveViewController: UIViewController{
         super.viewDidLoad()
 
     }
+    
+    
 
 }
 
