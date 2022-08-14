@@ -22,12 +22,18 @@ class HomeViewController: UIViewController {
 
         if bmi != nil {
             bmiLabel.text = bmi
+        } else {
+            bmiLabel.text = "18.01"
         }
         if bmiExLa != nil {
             bmiExLa.text = desc
+        } else {
+            bmiExLa.text = "You are underweight"
         }
         if bmr != nil {
             bmrLabel.text = bmr
+        } else {
+            bmrLabel.text = "1231.56"
         }
         // Do any additional setup after loading the view.
     }
