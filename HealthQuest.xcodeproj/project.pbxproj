@@ -10,6 +10,7 @@
 		548BE3B528A09DFE0035EFAA /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 548BE3B328A09DFE0035EFAA /* Model.xcdatamodeld */; };
 		548BE3B728A09E340035EFAA /* DailyTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548BE3B628A09E340035EFAA /* DailyTodoViewController.swift */; };
 		54B6954B289AFF5500FC8CBF /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B6954A289AFF5500FC8CBF /* PlanViewController.swift */; };
+		7DBCC07028A93C7500B4777C /* RunningDetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBCC06F28A93C7500B4777C /* RunningDetViewController.swift */; };
 		7DD3877C28A2EC0F00C644FB /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD3877B28A2EC0F00C644FB /* RegistrationViewController.swift */; };
 		7DD3877E28A2F4AD00C644FB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD3877D28A2F4AD00C644FB /* LoginViewController.swift */; };
 		7DD965DA28A214B8008D8D04 /* RunningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD965D928A214B8008D8D04 /* RunningViewController.swift */; };
@@ -50,6 +51,7 @@
 		548BE3B428A09DFE0035EFAA /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		548BE3B628A09E340035EFAA /* DailyTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTodoViewController.swift; sourceTree = "<group>"; };
 		54B6954A289AFF5500FC8CBF /* PlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
+		7DBCC06F28A93C7500B4777C /* RunningDetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningDetViewController.swift; sourceTree = "<group>"; };
 		7DD3877B28A2EC0F00C644FB /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		7DD3877D28A2F4AD00C644FB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7DD965D928A214B8008D8D04 /* RunningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunningViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				BC54EF9128A1EC2900D83543 /* Properties.json */,
 				7DD3877B28A2EC0F00C644FB /* RegistrationViewController.swift */,
 				7DD3877D28A2F4AD00C644FB /* LoginViewController.swift */,
+				7DBCC06F28A93C7500B4777C /* RunningDetViewController.swift */,
 			);
 			path = HealthQuest;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				FD5588EB28945EB4001E8A84 /* ViewController.swift in Sources */,
 				54B6954B289AFF5500FC8CBF /* PlanViewController.swift in Sources */,
 				FDD53B8F2899A94F005C5838 /* LoginController.swift in Sources */,
+				7DBCC07028A93C7500B4777C /* RunningDetViewController.swift in Sources */,
 				FD5588E728945EB4001E8A84 /* AppDelegate.swift in Sources */,
 				7DD3877C28A2EC0F00C644FB /* RegistrationViewController.swift in Sources */,
 				548BE3B728A09E340035EFAA /* DailyTodoViewController.swift in Sources */,

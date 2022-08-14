@@ -9,6 +9,7 @@ import UIKit
 import MapKit
 import CoreLocation
 import Foundation
+import CoreData
 
 class RunningViewController: UIViewController,CLLocationManagerDelegate {
 
@@ -18,6 +19,7 @@ class RunningViewController: UIViewController,CLLocationManagerDelegate {
 //    var timeStarted = Bool()
     var count:Int = 0
     var timerCounting:Bool = false
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
 //    var activeTimer = SKLabelNode()
     
@@ -36,6 +38,8 @@ class RunningViewController: UIViewController,CLLocationManagerDelegate {
     var calories:Double = 0 // calories
     var startedStatus:Bool = true
     var totalDistance:Double = 0
+    var totalSteps:Double = 0
+    var totalCalories:Double = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -145,6 +149,22 @@ class RunningViewController: UIViewController,CLLocationManagerDelegate {
             
             
         }else{
+            managerLocation.stopUpdatingLocation()
+            let context = appDelegate.persistentContainer.viewContext
+            let entity = NSEntityDescription.entity(forEntityName: "Runner", in: context)
+            let newUser = NSManagedObject(entity: entity!, insertInto: context)
+            
+            newUser.setValue(totalSteps, forKey: "steps")
+            newUser.setValue(totalCalories, forKey: "calories")
+            newUser.setValue(totalDistance, forKey: "distance")
+            newUser.setValue(activeTimer.text , forKey: "time")
+            
+            do {
+              try context.save()
+             } catch {
+              print("Error saving")
+            }
+            
             btnStart.backgroundColor = UIColor.systemGreen
             btnStart.setTitle("Go!", for: .normal)
             startedStatus = true
@@ -152,7 +172,7 @@ class RunningViewController: UIViewController,CLLocationManagerDelegate {
             count = 0
             totalDistance = 0
             distance = 0
-            managerLocation.stopUpdatingLocation()
+            
             self.mapView.showsUserLocation = false
         }
         
