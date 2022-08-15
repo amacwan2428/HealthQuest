@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+//code by Angel
 class BmiController: UIViewController, UITextFieldDelegate {
     var tags = 0
     var bmr: Double = 0

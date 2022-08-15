@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+//code by Angel
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var bmiLabel: UILabel!
