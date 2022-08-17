@@ -16,6 +16,7 @@
 		7DD965DA28A214B8008D8D04 /* RunningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD965D928A214B8008D8D04 /* RunningViewController.swift */; };
 		BC54EF9228A1EC2900D83543 /* Properties.json in Resources */ = {isa = PBXBuildFile; fileRef = BC54EF9128A1EC2900D83543 /* Properties.json */; };
 		BCD49C05289EB86600B0C136 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD49C04289EB86600B0C136 /* ProfileViewController.swift */; };
+		FD43326928AD6A94009504DF /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD43326828AD6A94009504DF /* TabViewController.swift */; };
 		FD51DF9028A1B92100327B99 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD51DF8F28A1B92100327B99 /* HomeViewController.swift */; };
 		FD5528D9289B6D1300D30206 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5528D8289B6D1300D30206 /* RegistrationController.swift */; };
 		FD5528DE289B6D3800D30206 /* BmiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5528DD289B6D3800D30206 /* BmiController.swift */; };
@@ -57,6 +58,7 @@
 		7DD965D928A214B8008D8D04 /* RunningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunningViewController.swift; sourceTree = "<group>"; };
 		BC54EF9128A1EC2900D83543 /* Properties.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Properties.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		BCD49C04289EB86600B0C136 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		FD43326828AD6A94009504DF /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		FD51DF8F28A1B92100327B99 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FD5528D8289B6D1300D30206 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		FD5528DD289B6D3800D30206 /* BmiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmiController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		FD5588E528945EB4001E8A84 /* HealthQuest */ = {
 			isa = PBXGroup;
 			children = (
+				FD43326828AD6A94009504DF /* TabViewController.swift */,
 				7DD965D928A214B8008D8D04 /* RunningViewController.swift */,
 				FD5588E628945EB4001E8A84 /* AppDelegate.swift */,
 				FD5528D8289B6D1300D30206 /* RegistrationController.swift */,
@@ -306,6 +309,7 @@
 				FD5588E728945EB4001E8A84 /* AppDelegate.swift in Sources */,
 				7DD3877C28A2EC0F00C644FB /* RegistrationViewController.swift in Sources */,
 				548BE3B728A09E340035EFAA /* DailyTodoViewController.swift in Sources */,
+				FD43326928AD6A94009504DF /* TabViewController.swift in Sources */,
 				FD5528D9289B6D1300D30206 /* RegistrationController.swift in Sources */,
 				548BE3B528A09DFE0035EFAA /* Model.xcdatamodeld in Sources */,
 				FD51DF9028A1B92100327B99 /* HomeViewController.swift in Sources */,

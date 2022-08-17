@@ -136,7 +136,7 @@ class BmiController: UIViewController, UITextFieldDelegate {
             bmr = 447.593 + bmr1 + bmr2 - bmr3
             print(bmr)
         }
-        let controller = storyboard?.instantiateViewController(identifier: "HomeStory") as! HomeViewController
+        let controller = storyboard?.instantiateViewController(identifier: "loginStory") as! LoginController
         controller.bmi = String(bmi)
         controller.desc = desc
         controller.bmr = String(bmr)

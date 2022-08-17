@@ -8,30 +8,33 @@
 import UIKit
 //code by Angel
 class HomeViewController: UIViewController {
-
+    let userDefaults = UserDefaults.standard
     @IBOutlet weak var bmiLabel: UILabel!
     
     @IBOutlet weak var bmrLabel: UILabel!
     
     @IBOutlet weak var bmiExLa: UILabel!
-    var bmi: String?
-    var bmr: String?
-    var desc: String?
+    var bmis: String?
+    var bmrs: String?
+    var descs: String?
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if bmi != nil {
-            bmiLabel.text = bmi
+        bmis = userDefaults.string(forKey: "bmi")
+        bmrs = userDefaults.string(forKey: "bmr")
+        descs = userDefaults.string(forKey: "desc")
+        if bmis != nil {
+            bmiLabel.text = bmis
         } else {
             bmiLabel.text = "18.01"
         }
-        if bmiExLa != nil {
-            bmiExLa.text = desc
+        if descs != nil {
+            bmiExLa.text = descs
         } else {
             bmiExLa.text = "You are underweight"
         }
-        if bmr != nil {
-            bmrLabel.text = bmr
+        if bmrs != nil {
+            bmrLabel.text = bmrs
         } else {
             bmrLabel.text = "1231.56"
         }
