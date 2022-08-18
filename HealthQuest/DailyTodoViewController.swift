@@ -13,6 +13,8 @@ class DailyTodoViewController: UIViewController {
     @IBOutlet weak var lblTitle: UILabel!
     var selectedDay:String?
     var workoutList = [Workout]()
+    let userDefaults = UserDefaults.standard
+
     //reference to managed object context
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -54,8 +56,15 @@ class DailyTodoViewController: UIViewController {
 
 }
 extension DailyTodoViewController: UITableViewDelegate, UITableViewDataSource{
-    private func handleMarkAsDone() {
-        print ("Mark as done")
+    private func handleMarkAsDone(indexPath: IndexPath) {
+        let key  = workoutList[indexPath.row].day! + workoutList[indexPath.row].title!
+        userDefaults.set(true, forKey: key)
+        print ("Mark as done " + key + " " + String(userDefaults.bool(forKey: key)))
+    }
+    private func handleMarkAsUndone(indexPath: IndexPath) {
+        let key  = workoutList[indexPath.row].day! + workoutList[indexPath.row].title!
+        userDefaults.set(false, forKey: key)
+        print ("Mark as undone " + key + " " + String(userDefaults.bool(forKey: key)))
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -67,6 +76,18 @@ extension DailyTodoViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         // Add task title to the cell
         cell.textLabel?.text = workoutList[indexPath.row].title
+        let key  = workoutList[indexPath.row].day! + workoutList[indexPath.row].title!
+        print ("Loaded key " + key + " " + String(userDefaults.bool(forKey: key)))
+
+        if userDefaults.bool(forKey: key) == false {
+            cell.accessoryType = UITableViewCell.AccessoryType.none
+            cell.textLabel?.textColor = UIColor.black
+        }
+        else
+        {
+            cell.accessoryType = UITableViewCell.AccessoryType.checkmark
+            cell.textLabel?.textColor = UIColor.gray
+        }
         return cell
     }
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
@@ -76,7 +97,7 @@ extension DailyTodoViewController: UITableViewDelegate, UITableViewDataSource{
                    leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .normal,
                                         title: "Undo") { [weak self] (action, view, completionHandler) in
-                                            self?.handleMarkAsDone()
+            self?.handleMarkAsUndone(indexPath: indexPath)
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
             tableView.cellForRow(at: indexPath)?.textLabel?.textColor = UIColor.black
                                             completionHandler(true)
@@ -91,7 +112,7 @@ extension DailyTodoViewController: UITableViewDelegate, UITableViewDataSource{
         
         let done = UIContextualAction(style: .normal,
                                          title: "Done") { [weak self] (action, view, completionHandler) in
-                                            self?.handleMarkAsDone()
+                                            self?.handleMarkAsDone(indexPath: indexPath)
                                             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
             tableView.cellForRow(at: indexPath)?.textLabel?.textColor = UIColor.gray
 
