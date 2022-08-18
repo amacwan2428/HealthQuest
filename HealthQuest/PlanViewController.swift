@@ -9,18 +9,21 @@ import UIKit
 
 class PlanViewController: UIViewController {
 
-    @IBAction func SelectWorkout(_ sender: UIButton) {
-        print(sender.tag)
- 
-        
-    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let destinationVC = segue.destination as! DailyTodoViewController
+        destinationVC.selectedDay = segue.identifier
+        
+        
+    }
     /*
     // MARK: - Navigation
 

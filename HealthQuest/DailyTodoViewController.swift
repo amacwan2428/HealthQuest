@@ -10,25 +10,34 @@ import CoreData
 
 class DailyTodoViewController: UIViewController {
     @IBOutlet weak var table: UITableView!
-    var workoutList = [WorkoutItem]()
+    var selectedDay:String?
+    var workoutList = [Workout]()
     //reference to managed object context
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(selectedDay!)
         // Setup table view
         table.delegate = self
         table.dataSource = self
         // Load workouts
+        let allWorkouts = [
+            "mon" : ["15 min cardio", "3x10 Pushups", "3x10 Squats","3x10 Dumbbell rows"],
+            "tue" : ["30 min Cardio", "3x10 Single-leg deadlifts", "3x10 Burpees", "2x Planks","3x10 Glute bridge"],
+            "wed" : ["30 min Cardio", "3x10 Bench Press", "3x10 Push-Ups","3x10 Bent-Over Row"],
+            "thu" : ["30 min Cardio","3x10 Lunges", "3x10 Pushups", "3x10 Squats","3x10 Dumbbell rows"],
+            "fri" : ["30 min Cardio","3x10 Bench Press", "3x10 Pushups", "3x10 Burpees","3x10 Dumbbell rows"]
+            
+        ]
         // Use core data instead
-        let teste = "10p, 20 a, 30 c, 123d";
-        let testList = teste.split(separator:",")
-        for activity in testList
+        let dayWorkouts = allWorkouts[selectedDay!]!;
+        for activity in dayWorkouts
         {
-            let item = WorkoutItem(context: self.context)
+            let item = Workout(context: self.context)
             // Get task title from textfield
             item.title = String(activity)
-            item.day = 0;
+            item.day = selectedDay
             // Add task to array
             self.workoutList.append(item)
             print(item)
@@ -63,13 +72,14 @@ extension DailyTodoViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView,
                    leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .normal,
-                                        title: "Done") { [weak self] (action, view, completionHandler) in
+                                        title: "Undo") { [weak self] (action, view, completionHandler) in
                                             self?.handleMarkAsDone()
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
             tableView.cellForRow(at: indexPath)?.textLabel?.textColor = UIColor.black
                                             completionHandler(true)
         }
-        action.backgroundColor = .systemGreen
+        action.backgroundColor = .systemOrange
+        
         return UISwipeActionsConfiguration(actions: [action])
         
     }
