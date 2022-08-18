@@ -22,7 +22,13 @@ class ProfileViewController: UIViewController{
         
         imageAvatar.setRounded()
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        initDate4Profile()
+        updateUserProfile()
+        
+        imageAvatar.setRounded()
+    }
     @IBAction func btnEdit(){
         goToVC(vc_id: "vc_profile_edit")
     }
@@ -98,7 +104,14 @@ class ProfileEditViewController: UIViewController{
         super.viewDidLoad()
         readProfile()
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        readProfile()
+    }
+        
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presentingViewController?.viewWillDisappear(true)
+    }
     @IBAction func btnSave(){
         self.dismiss(animated: true, completion: nil)
         let userName = textUserName.text
@@ -108,13 +121,19 @@ class ProfileEditViewController: UIViewController{
         userDefaults.set(userName,forKey: "UserName")
         userDefaults.set(userDOB, forKey: "UserDOB")
         userDefaults.set(userBio, forKey:"UserBio")
-        
+        print("Username" + userDefaults.string(forKey: "UserName")!)
+        presentingViewController?.viewWillAppear(true)
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func btnBack(){
         self.dismiss(animated: true, completion: nil)
+       
 
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        presentingViewController?.viewWillAppear(true)
     }
     
     private func readProfile(){

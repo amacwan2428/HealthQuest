@@ -219,11 +219,11 @@
             <objects>
                 <viewController id="otD-yT-rkq" customClass="DailyTodoViewController" customModule="HealthQuest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0jO-0x-PSJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NCY-Su-4ed">
-                                <rect key="frame" x="0.0" y="173" width="414" height="661"/>
+                                <rect key="frame" x="0.0" y="129" width="414" height="685"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="SKK-7b-84H">
@@ -236,29 +236,40 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEv-ol-ZE7">
+                                <rect key="frame" x="20" y="44" width="374" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="byc-ge-H20"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="byc-ge-H20" firstAttribute="bottom" secondItem="NCY-Su-4ed" secondAttribute="bottom" constant="28" id="9aE-kk-h80"/>
                             <constraint firstItem="NCY-Su-4ed" firstAttribute="top" secondItem="byc-ge-H20" secondAttribute="top" constant="85" id="9ti-pP-Xdf"/>
+                            <constraint firstItem="bEv-ol-ZE7" firstAttribute="top" secondItem="byc-ge-H20" secondAttribute="top" id="D7E-Ug-BcH"/>
                             <constraint firstItem="NCY-Su-4ed" firstAttribute="centerX" secondItem="0jO-0x-PSJ" secondAttribute="centerX" id="IqA-g4-TZh"/>
+                            <constraint firstItem="bEv-ol-ZE7" firstAttribute="leading" secondItem="0jO-0x-PSJ" secondAttribute="leadingMargin" id="X0o-Nc-9wc"/>
+                            <constraint firstItem="NCY-Su-4ed" firstAttribute="top" secondItem="bEv-ol-ZE7" secondAttribute="bottom" constant="34" id="bgl-qL-lIe"/>
                             <constraint firstItem="NCY-Su-4ed" firstAttribute="leading" secondItem="byc-ge-H20" secondAttribute="leading" id="crF-zo-MOU"/>
+                            <constraint firstItem="bEv-ol-ZE7" firstAttribute="centerX" secondItem="NCY-Su-4ed" secondAttribute="centerX" id="ie2-T0-gOt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eqH-Tg-g2m"/>
                     <connections>
+                        <outlet property="lblTitle" destination="bEv-ol-ZE7" id="upg-6W-cxq"/>
                         <outlet property="table" destination="NCY-Su-4ed" id="QwA-6d-Eph"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1AP-AM-xVa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2955" y="384"/>
+            <point key="canvasLocation" x="2953.6231884057975" y="383.70535714285711"/>
         </scene>
         <!--Work Out-->
         <scene sceneID="cQ9-se-w3E">
             <objects>
-                <viewController id="fww-vy-MRa" sceneMemberID="viewController">
+                <viewController id="fww-vy-MRa" customClass="PlanViewController" customModule="HealthQuest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F9m-iy-W25">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -281,7 +292,7 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="  "/>
                                                         <connections>
-                                                            <segue destination="otD-yT-rkq" kind="show" id="6Df-Cp-ErZ"/>
+                                                            <segue destination="otD-yT-rkq" kind="show" identifier="Monday" id="6Df-Cp-ErZ"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4v-e6-nuv">
@@ -293,7 +304,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="workout name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28m-cG-WbS">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28m-cG-WbS">
                                                         <rect key="frame" x="0.0" y="244" width="200" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="aXO-Ov-W9N"/>
@@ -334,7 +345,7 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="  "/>
                                                         <connections>
-                                                            <segue destination="otD-yT-rkq" kind="show" identifier="tue" id="0Ps-fp-GCz"/>
+                                                            <segue destination="otD-yT-rkq" kind="show" identifier="Tuesday" id="0Ps-fp-GCz"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuesday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yda-pS-gM9">
@@ -346,7 +357,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="workout name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Les-EN-Ji4">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Les-EN-Ji4">
                                                         <rect key="frame" x="0.0" y="244" width="200" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="mt1-0c-XW2"/>
@@ -387,7 +398,7 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="   "/>
                                                         <connections>
-                                                            <segue destination="otD-yT-rkq" kind="show" identifier="wed" id="gOw-9U-nSz"/>
+                                                            <segue destination="otD-yT-rkq" kind="show" identifier="Wednesday" id="gOw-9U-nSz"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wednesday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccg-xy-l1R">
@@ -399,7 +410,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="workout name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDd-PE-Dpo">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDd-PE-Dpo">
                                                         <rect key="frame" x="0.0" y="244" width="200" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="v7U-lg-yPf"/>
@@ -440,7 +451,7 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="  "/>
                                                         <connections>
-                                                            <segue destination="otD-yT-rkq" kind="show" identifier="thu" id="KRP-A7-Wuk"/>
+                                                            <segue destination="otD-yT-rkq" kind="show" identifier="Thursday" id="KRP-A7-Wuk"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thursday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwx-wM-9ih">
@@ -452,7 +463,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="workout name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDK-jG-jwD">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDK-jG-jwD">
                                                         <rect key="frame" x="0.0" y="244" width="200" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="Kkt-oB-S05"/>
@@ -493,7 +504,7 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="  "/>
                                                         <connections>
-                                                            <segue destination="otD-yT-rkq" kind="show" identifier="fri" id="lRA-4O-2ey"/>
+                                                            <segue destination="otD-yT-rkq" kind="show" identifier="Friday" id="lRA-4O-2ey"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jC8-gR-m9r">
@@ -505,7 +516,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="workout name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqx-p7-vrP">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqx-p7-vrP">
                                                         <rect key="frame" x="0.0" y="244" width="200" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="ZWb-ES-qTa"/>
@@ -644,7 +655,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButtonClic:" destination="blU-t3-djq" eventType="touchUpInside" id="XzR-SZ-0ke"/>
-                                    <segue destination="otD-yT-rkq" kind="show" id="bOR-8C-R6p"/>
+                                    <segue destination="otD-yT-rkq" kind="show" identifier="Monday" id="bOR-8C-R6p"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rZy-zH-FBk">
@@ -1829,10 +1840,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xLV-bE-hyx"/>
         <segue reference="3RK-sb-tIv"/>
         <segue reference="cx7-js-xiO"/>
-        <segue reference="bOR-8C-R6p"/>
+        <segue reference="6Df-Cp-ErZ"/>
         <segue reference="V3v-n1-qMb"/>
     </inferredMetricsTieBreakers>
     <resources>
