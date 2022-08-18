@@ -334,7 +334,7 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="  "/>
                                                         <connections>
-                                                            <segue destination="otD-yT-rkq" kind="show" id="0Ps-fp-GCz"/>
+                                                            <segue destination="otD-yT-rkq" kind="show" identifier="tue" id="0Ps-fp-GCz"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuesday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yda-pS-gM9">
@@ -387,7 +387,7 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="   "/>
                                                         <connections>
-                                                            <segue destination="otD-yT-rkq" kind="show" id="gOw-9U-nSz"/>
+                                                            <segue destination="otD-yT-rkq" kind="show" identifier="wed" id="gOw-9U-nSz"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wednesday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccg-xy-l1R">
@@ -440,7 +440,7 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="  "/>
                                                         <connections>
-                                                            <segue destination="otD-yT-rkq" kind="show" id="KRP-A7-Wuk"/>
+                                                            <segue destination="otD-yT-rkq" kind="show" identifier="thu" id="KRP-A7-Wuk"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thursday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwx-wM-9ih">
@@ -493,7 +493,7 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="  "/>
                                                         <connections>
-                                                            <segue destination="otD-yT-rkq" kind="show" id="lRA-4O-2ey"/>
+                                                            <segue destination="otD-yT-rkq" kind="show" identifier="fri" id="lRA-4O-2ey"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jC8-gR-m9r">
@@ -1862,7 +1862,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="3RK-sb-tIv"/>
         <segue reference="2EN-Ju-Hpo"/>
-        <segue reference="gOw-9U-nSz"/>
+        <segue reference="6Df-Cp-ErZ"/>
         <segue reference="V3v-n1-qMb"/>
     </inferredMetricsTieBreakers>
     <resources>
