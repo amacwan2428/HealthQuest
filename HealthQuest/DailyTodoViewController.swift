@@ -27,7 +27,7 @@ class DailyTodoViewController: UIViewController {
         table.delegate = self
         table.dataSource = self
         // Load workouts
-        let allWorkouts = [
+        var allWorkouts = [
             "Monday" : ["15 min cardio", "3x10 Pushups", "3x10 Squats","3x10 Dumbbell rows"],
             "Tuesday" : ["30 min Cardio", "3x10 Single-leg deadlifts", "3x10 Burpees", "2x Planks","3x10 Glute bridge"],
             "Wednesday" : ["30 min Cardio", "3x10 Bench Press", "3x10 Push-Ups","3x10 Bent-Over Row"],
@@ -35,6 +35,17 @@ class DailyTodoViewController: UIViewController {
             "Friday" : ["30 min Cardio","3x10 Bench Press", "3x10 Pushups", "3x10 Burpees","3x10 Dumbbell rows"]
             
         ]
+        let week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        for day in week
+        {
+            if userDefaults.string(forKey: day) != nil {
+                var workouts = userDefaults.string(forKey: day)
+                var arr = workouts?.components(separatedBy: ",")
+                allWorkouts[day] = arr
+                
+            }
+        }
+        
         // Use core data instead
         let dayWorkouts = allWorkouts[selectedDay!]!;
         for activity in dayWorkouts
@@ -75,7 +86,7 @@ extension DailyTodoViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         // Add task title to the cell
-        cell.textLabel?.text = workoutList[indexPath.row].title
+        cell.textLabel?.text = workoutList[indexPath.row].title!
         let key  = workoutList[indexPath.row].day! + workoutList[indexPath.row].title!
         print ("Loaded key " + key + " " + String(userDefaults.bool(forKey: key)))
 
